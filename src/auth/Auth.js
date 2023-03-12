@@ -7,11 +7,9 @@ import Footer from '../components/Footer/Footer'
 
 const Auth = () => {
     return (
-        <React.Fragment>
-            <Header />
-            	<Outlet />
-            <Footer />
-        </React.Fragment>
+        <div className="cool-background flex h-screen">        
+        	<Outlet />
+		</div>
     );
 }
 

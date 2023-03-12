@@ -25,11 +25,11 @@ function App() {
     // }, [isLoggedIn]);
 	
 	return (
-		<React.Fragment>
+		<div className="bg-red-300">
 			{isLoggedIn && <Header />}
 				<Outlet />
 			{isLoggedIn && <Footer />}
-		</React.Fragment>
+		</div>
 	);
 }
 

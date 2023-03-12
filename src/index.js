@@ -9,7 +9,6 @@ import ProtectedRoute from './utilities/ProtectedRoute';
 import Home from './routes/Home'
 import './index.css';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(

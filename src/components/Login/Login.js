@@ -26,7 +26,7 @@ function Login(){
 		e.preventDefault()
 	}
 	return(
-		<section className="w-72 p-5 bg-slate-100 rounded m-auto mt-12">
+		<section className="backdrop-blur-sm bg-white/40 p-4 rounded m-auto">
 			<p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
 			<h1 className="text-2xl mb-3">Login</h1>
 			<form className="w-full" onSubmit={handleSubmit}>
