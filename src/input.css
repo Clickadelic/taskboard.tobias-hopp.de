@@ -6,3 +6,10 @@
 	background: url('./static/images/auth-bg.jpg') top center no-repeat;
 	background-size: cover;
 }
+
+input:checked + div {  
+	@apply border-blue-500;  
+  }  
+  input:checked + div svg {  
+	@apply block;  
+  }

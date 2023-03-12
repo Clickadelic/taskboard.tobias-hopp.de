@@ -6,7 +6,7 @@ import Login from './components/Login/Login';
 import Auth from './auth/Auth';
 import App from './App';
 import ProtectedRoute from './utilities/ProtectedRoute';
-import Home from './routes/Home'
+import Dashboard from './routes/Dashboard'
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,9 +19,9 @@ root.render(
 					<Route path='login' element={<Login />} />
 				</Route>
 				<Route path="/" element={<App />}>
-					<Route path='' element={
+					<Route path='/dashboard' element={
 						<ProtectedRoute>
-							<Home />
+							<Dashboard />
 						</ProtectedRoute>
 					} />
 				</Route>

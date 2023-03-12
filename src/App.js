@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Outlet } from 'react-router-dom'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
+import AuthHeader from './components/AuthHeader/AuthHeader'
+import AuthSidebar from './components/AuthSidebar/AuthSidebar'
 import {useState, useEffect} from 'react'
 import './App.css';
 
@@ -25,10 +25,10 @@ function App() {
     // }, [isLoggedIn]);
 	
 	return (
-		<div className="bg-red-300">
-			{isLoggedIn && <Header />}
+		<div className="bg-slate-200 min-h-screen">
+			{isLoggedIn && <AuthSidebar />}
+			{isLoggedIn && <AuthHeader />}
 				<Outlet />
-			{isLoggedIn && <Footer />}
 		</div>
 	);
 }

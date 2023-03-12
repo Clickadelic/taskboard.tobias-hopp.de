@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const AuthHeader = () => {
 
     const navigate = useNavigate();
     // const logout = () => {
@@ -10,10 +10,10 @@ const Navbar = () => {
     // }
 
     return (
-        <div className="container m-auto w-full p-2 bg-sky-600">
-			Header with Navbar
+        <div className="absolute ml-64 w-full p-2 bg-teal-600 text-white">
+			AuthHeader
 		</div>
     );
 }
 
-export default Navbar;
+export default AuthHeader;
