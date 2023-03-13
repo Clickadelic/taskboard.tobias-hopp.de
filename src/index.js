@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from './components/Login/Login';
-import Auth from './auth/Auth';
-import App from './App';
-import ProtectedRoute from './utilities/ProtectedRoute';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Login from './components/Login/Login'
+import Auth from './auth/Auth'
+import App from './App'
+import Home from './routes/Home'
+import Error404 from './routes/Error404'
+import ProtectedRoute from './utilities/ProtectedRoute'
 import Dashboard from './routes/Dashboard'
 import './index.css';
 
@@ -15,6 +17,7 @@ root.render(
 	<React.StrictMode>
 		<BrowserRouter basename={'/'}>
 			<Routes>
+				<Route path='/' element={<Home />} />
 				<Route path='/auth' element={<Auth />}>
 					<Route path='login' element={<Login />} />
 				</Route>
@@ -25,6 +28,7 @@ root.render(
 						</ProtectedRoute>
 					} />
 				</Route>
+				<Route path='*' element={<Error404 />} />
 			</Routes>
 		</BrowserRouter>
 	</React.StrictMode>

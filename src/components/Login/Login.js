@@ -31,7 +31,7 @@ function Login(){
 		<div className="w-[600px] backdrop-blur-sm rounded p-12 m-auto">
 			<header className=" bg-black rounded flex justify-between">
 				<img src={logoSrc} className="flex" alt="" />
-				<button onClick={() => alert("Clicked Help")} className="top-0 right-2 border mb-2 border-slate-400 rounded-tr text-white w-24 flex flex-col">
+				<button onClick={() => alert("Clicked Help")} className="top-0 right-2 border mb-2 border-slate-400 text-white w-24 flex flex-col">
 					<span className="block m-auto mt-4">
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
 							<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
