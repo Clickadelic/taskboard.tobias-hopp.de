@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 import { Outlet } from 'react-router-dom'
 import AuthHeader from './components/AuthHeader/AuthHeader'
 import AuthSidebar from './components/AuthSidebar/AuthSidebar'
@@ -10,25 +9,24 @@ function App() {
 
 	const [isLoggedIn, setIsLoggedIn] = useState(true)
 
-    // const checkUserToken = () => {
-    //     // const userToken = localStorage.getItem('user-token');
-	// 	const userToken = true
+	const checkUserToken = () => {
+    const userToken = localStorage.getItem('user-token');
 
-    //     if (!userToken || userToken === 'undefined') {
-    //         setIsLoggedIn(false);
-    //     }
-    //     setIsLoggedIn(true);
-    // }
+    if (!userToken || userToken === 'undefined') {
+			setIsLoggedIn(false);
+		}
+		setIsLoggedIn(true);
+    }
 
-    // useEffect(() => {
-    //     checkUserToken();
-    // }, [isLoggedIn]);
+    useEffect(() => {
+        checkUserToken();
+    }, [isLoggedIn]);
 	
 	return (
 		<div className="bg-slate-200 min-h-screen">
 			{isLoggedIn && <AuthSidebar />}
 			{isLoggedIn && <AuthHeader />}
-				<Outlet />
+			<Outlet />
 		</div>
 	);
 }

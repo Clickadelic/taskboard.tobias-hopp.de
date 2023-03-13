@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Login from './components/Login/Login'
+import Register from './components/Register/Register'
 import Auth from './auth/Auth'
 import App from './App'
 import Home from './routes/Home'
@@ -20,6 +21,7 @@ root.render(
 				<Route path='/' element={<Home />} />
 				<Route path='/auth' element={<Auth />}>
 					<Route path='login' element={<Login />} />
+					<Route path='register' element={<Register />} />
 				</Route>
 				<Route path="/" element={<App />}>
 					<Route path='/dashboard' element={
