@@ -1,7 +1,9 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import AuthHeader from './components/AuthHeader/AuthHeader'
-import AuthSidebar from './components/AuthSidebar/AuthSidebar'
+
+import AuthHeader from './layout/AuthHeader'
+import AuthSidebar from './layout/AuthSidebar'
+
 import {useState, useEffect} from 'react'
 import './App.css';
 
