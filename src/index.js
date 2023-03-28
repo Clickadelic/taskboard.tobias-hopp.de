@@ -7,10 +7,13 @@ import Register from './components/Register/Register'
 import Auth from './auth/Auth'
 import App from './App'
 import Home from './routes/Home'
+import Products from './routes/Products'
+import Functions from './routes/Functions'
 import Error404 from './routes/Error404'
 import ProtectedRoute from './utilities/ProtectedRoute'
 import Dashboard from './routes/Dashboard'
 import './index.css';
+import ForgotPassword from './components/ForgotPassword'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -19,9 +22,12 @@ root.render(
 		<BrowserRouter basename={'/'}>
 			<Routes>
 				<Route path='/' element={<Home />} />
+				<Route path='/products' element={<Products />} />
+				<Route path='/' element={<Home />} />
 				<Route path='/auth' element={<Auth />}>
 					<Route path='login' element={<Login />} />
 					<Route path='register' element={<Register />} />
+					<Route path='forgot-password' element={<ForgotPassword />} />
 				</Route>
 				<Route path="/" element={<App />}>
 					<Route path='/dashboard' element={

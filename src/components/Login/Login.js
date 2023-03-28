@@ -1,7 +1,8 @@
 import React from 'react'
 import { useRef, useState, useEffect, } from 'react'
+
 import {Link } from 'react-router-dom'
-import logoSrc from '../../static/images/bcl/bcl-on-site-logo.png'
+import AppLogo from '../AppLogo'
 
 function Login(){
 
@@ -19,9 +20,7 @@ function Login(){
 	}, [])
 
 	useEffect(() => {
-
 		setErrMsg('')
-
 	}, [user, pwd])
 
 	const handleSubmit = async (e) => {
@@ -30,7 +29,7 @@ function Login(){
 	return(
 		<div className="w-[600px] backdrop-blur-sm rounded p-12 m-auto">
 			<header className=" bg-black rounded flex justify-between">
-				<img src={logoSrc} className="flex" alt="" />
+				<AppLogo />
 				<button onClick={() => alert("Clicked Help")} className="top-0 right-2 border mb-2 border-slate-400 text-white w-24 flex flex-col">
 					<span className="block m-auto mt-4">
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
@@ -41,7 +40,7 @@ function Login(){
 					<span className="block m-auto">Hilfe</span>
 				</button>
 			</header>
-			<section className="bg-yellow-400 p-12 rounded">
+			<section className="bg-yellow-500 p-12 rounded">
 				<p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
 				<h1 className="text-2xl mb-1">Anmelden</h1>
 				<p className="mb-8">Bitte melden Sie sich mit Ihrem Benutzernamen und Ihrem Passwort an.</p>
@@ -70,7 +69,7 @@ function Login(){
 						</div>  
 					</div>
 					<button className="rounded bg-teal-600 hover:bg-teal-700 px-3 p-4 text-2xl w-full text-white mb-12">Anmelden</button>
-					<p className="mb-2">Ich habe mein <Link to="https://www.example.com" className="underline underline-offset-2 hover:text-teal-700 mb-2" target="_blank">Passwort vergessen</Link>.</p>
+					<p className="mb-2">Ich habe mein <Link to="/auth/forgot-password" className="underline underline-offset-2 hover:text-teal-700 mb-2" target="_self">Passwort vergessen</Link>.</p>
 					<p>Ich möchte mich <Link to="/auth/register/" className="underline underline-offset-2 hover:text-teal-700" target="_self">Registrieren</Link>.</p>
 				</form>
 			</section>
