@@ -5,7 +5,7 @@ import logoSrc from '../static/images/bcl/bcl_lb.png'
 function Home() {
 	return (
 		
-		<div class="bg-black">
+		<div class="bg-black bg-black-gradient-tr">
 			<header class="absolute inset-x-0 top-0 z-50">
 				<nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
 				<div class="flex lg:flex-1">
@@ -23,10 +23,10 @@ function Home() {
 					</button>
 				</div>
 				<div class="hidden lg:flex lg:gap-x-12">
-					<NavLink href="#" class="text-sm font-semibold leading-6 text-white">Produkt</NavLink>
-					<NavLink href="#" class="text-sm font-semibold leading-6 text-white">Funktionen</NavLink>
-					<NavLink href="#" class="text-sm font-semibold leading-6 text-white">Administration</NavLink>
-					<NavLink href="#" class="text-sm font-semibold leading-6 text-white">Unternehmen</NavLink>
+					<NavLink href="#" class="text-sm font-medium rounded border border-1 px-3 hover:text-yellow-500 leading-6 text-white">Produkt</NavLink>
+					<NavLink href="#" class="text-sm font-medium rounded border border-1 px-3 hover:text-yellow-500 leading-6 text-white">Funktionen</NavLink>
+					<NavLink href="#" class="text-sm font-medium rounded border border-1 px-3 hover:text-yellow-500 leading-6 text-white">Administration</NavLink>
+					<NavLink href="#" class="text-sm font-medium rounded border border-1 px-3 hover:text-yellow-500 leading-6 text-white">Unternehmen</NavLink>
 				</div>
 				<div class="hidden lg:flex lg:flex-1 lg:justify-end">
 					<NavLink to="./auth/login" class="text-sm font-semibold leading-6 text-white">Log in <span aria-hidden="true">&rarr;</span></NavLink>
