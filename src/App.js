@@ -9,7 +9,6 @@ import './App.css';
 function App() {
 
 	const [isLoggedIn, setIsLoggedIn] = useState(true)
-
 	const checkUserToken = () => {
     const userToken = localStorage.getItem('user-token');
 
