@@ -687,6 +687,11 @@ video {
   margin-bottom: 2rem;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .-mt-1 {
   margin-top: -0.25rem;
 }
@@ -1220,16 +1225,6 @@ video {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
-.cool-background {
-  background: url('./static/images/auth-bg.jpg') top center no-repeat;
-  background-size: cover;
-}
-
-.bg-black-gradient-tr {
-  background: url('./static/images/bg-black-gradient-top-right.jpg') top center no-repeat;
-  background-size: cover;
-}
-
 input:checked + div {
   --tw-border-opacity: 1;
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
@@ -1239,8 +1234,9 @@ input:checked + div svg {
   display: block;
 }
 
-.bg-nature {
-  background-color: red;
+.bg-open-field {
+  background: url('./static/images/Background-Open-Field.jpg') top center no-repeat;
+  background-size: cover;
 }
 
 .focus-within\:border-teal-500:focus-within {

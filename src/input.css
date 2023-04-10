@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.cool-background {
-	background: url('./static/images/auth-bg.jpg') top center no-repeat;
-	background-size: cover;
-}
-
-.bg-black-gradient-tr {
-	background: url('./static/images/bg-black-gradient-top-right.jpg') top center no-repeat;
-	background-size: cover;
-}
-
 input:checked + div {  
 	@apply border-blue-500;  
 }
@@ -20,6 +10,7 @@ input:checked + div svg {
 	@apply block;  
 }
 
-.bg-nature {
-	background-color: red;
+.bg-open-field {
+	background: url('./static/images/Background-Open-Field.jpg') top center no-repeat;
+	background-size: cover;
 }

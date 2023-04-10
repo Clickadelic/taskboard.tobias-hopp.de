@@ -1,5 +1,5 @@
 import React from "react";
-import logoSrc from "../../static/images/bcl/bcl_logo.png"
+// import logoSrc from "../../static/images/bcl/bcl_logo.png"
 
 const AuthLayout = () => {
     return (
@@ -7,7 +7,7 @@ const AuthLayout = () => {
 			<aside class="App-sidebar Auth-Sidebar hidden md:block fixed top-0 left-0 w-64 min-h-screen bg-white shadow">
 				<div class="App-sidebar-logo flex justify-center px-2 py-3">
 					<h1 class="text-2xl">
-						<img src={logoSrc} class="logo inline mr-2 -mt-1" alt="BCL Logo" />
+						{/* <img src={logoSrc} class="logo inline mr-2 -mt-1" alt="BCL Logo" /> */}
 						<span className="inline font-medium">Company Name</span>
 					</h1>
 				</div>

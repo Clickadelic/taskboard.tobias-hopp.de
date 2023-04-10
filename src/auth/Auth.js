@@ -4,7 +4,9 @@ import { Outlet } from "react-router-dom";
 // TODO ReWrite these components to Public Header with Navbar
 const Auth = () => {
     return (
-        <Outlet />
+		<div className="bg-open-field min-h-screen">
+        	<Outlet />
+		</div>
     );
 }
 

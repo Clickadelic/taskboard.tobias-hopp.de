@@ -30,6 +30,11 @@ root.render(
 							<Dashboard />
 						</ProtectedRoute>
 					} />
+					<Route path='/overview' element={
+						<ProtectedRoute>
+							<Dashboard />
+						</ProtectedRoute>
+					} />
 				</Route>
 				<Route path='*' element={<Error404 />} />
 			</Routes>
