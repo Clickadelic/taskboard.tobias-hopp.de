@@ -20,10 +20,10 @@ function Home() {
 						</button>
 					</div>
 					<div className="hidden lg:flex lg:gap-x-12">
-						<NavLink href="#" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-yellow-500 leading-6">Produkt</NavLink>
-						<NavLink href="#" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-yellow-500 leading-6">Funktionen</NavLink>
-						<NavLink href="#" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-yellow-500 leading-6">Administration</NavLink>
-						<NavLink href="#" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-yellow-500 leading-6">Unternehmen</NavLink>
+						<NavLink href="/" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-yellow-500 leading-6">Products</NavLink>
+						<NavLink href="/" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-yellow-500 leading-6">About</NavLink>
+						<NavLink href="/" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-yellow-500 leading-6">Administration</NavLink>
+						<NavLink href="/" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-yellow-500 leading-6">Company</NavLink>
 					</div>
 					<div className="hidden lg:flex lg:flex-1 lg:justify-end">
 						<NavLink to="./auth/login" className="text-sm font-semibold leading-6 text-white hover:text-yellow-500 hover:ring">Log in <span aria-hidden="true">&rarr;</span></NavLink>
@@ -61,15 +61,15 @@ function Home() {
 				<div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
 					<div className="hidden sm:mb-8 sm:flex sm:justify-center">
 						<div className="relative rounded-full py-1 px-3 text-sm leading-6 text-white ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-							BCL|OnSite. <Link to="/demo" className="font-semibold text-yellow-500"><span className="absolute inset-0" aria-hidden="true"></span>Mehr erfahren <span aria-hidden="true">&rarr;</span></Link>
+							Company Name. <Link to="/demo" className="font-semibold text-yellow-500"><span className="absolute inset-0" aria-hidden="true"></span>More Information <span aria-hidden="true">&rarr;</span></Link>
 						</div>
 					</div>
 					<div className="text-center">
-						<h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Prozessorientierte Baulogistiksteuerung</h1>
-						<p className="mt-6 text-lg leading-8 text-white">Die Features unserer Hauseigenen Software BCL | OnSite sind maßgeschneidert für Ihre Bedürfnisse.</p>
+						<h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Hero Title</h1>
+						<p className="mt-6 text-lg leading-8 text-white">Super hero subline.</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
-							<Link to="/auth/login" className="rounded-md bg-yellow-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600">BCL | OnSite Login</Link>
-							<Link to="/demo" className="text-sm font-semibold leading-6 text-yellow-500">Mehr erfahren <span aria-hidden="true">→</span></Link>
+							<Link to="/auth/login" className="rounded-md bg-yellow-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600">Go to Login</Link>
+							<Link to="/demo" className="text-sm font-semibold leading-6 text-yellow-500">More information<span aria-hidden="true">→</span></Link>
 						</div>
 					</div>
 				</div>

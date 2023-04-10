@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRef, useState, useEffect, } from 'react'
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import AppLogo from '../AppLogo'
 
 function Register(){

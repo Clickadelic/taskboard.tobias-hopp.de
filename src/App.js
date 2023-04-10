@@ -1,8 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
-import AuthHeader from './layout/AuthHeader'
-import AuthSidebar from './layout/AuthSidebar'
+import AuthLayout from './layout/AuthLayout'
 
 import {useState, useEffect} from 'react'
 import './App.css';
@@ -26,8 +25,7 @@ function App() {
 	
 	return (
 		<div className="bg-slate-200 min-h-screen">
-			{isLoggedIn && <AuthSidebar />}
-			{isLoggedIn && <AuthHeader />}
+			{isLoggedIn && <AuthLayout />}
 			<Outlet />
 		</div>
 	);
