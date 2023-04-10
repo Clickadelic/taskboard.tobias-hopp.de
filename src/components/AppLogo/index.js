@@ -5,7 +5,7 @@ import {Link } from 'react-router-dom'
 function AppLogo() {
 	return (
 		<Link to="/" className="flex w-full justify-center -m-1.5 py-6 text-xl font-medium">
-			<span className="sr-only">Company Name</span>
+			<span className="sr-only">Toby's Dashboard</span>
 			{/* Remove if no image import is needed */}
 			{/* <img src={banner} className="w-12" alt="" /> */}
 			<span>
@@ -14,7 +14,7 @@ function AppLogo() {
 					<path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
 				</svg>
 			</span>
-			<span className="text-white">Company Name</span>
+			<span className="text-white">Toby's Dashboard</span>
 		</Link>
 	)
 }
