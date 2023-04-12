@@ -10,6 +10,11 @@ input:checked + div svg {
 	@apply block;  
 }
 
+.bg-rocky-beach {
+	background: url('./static/images/Background-Rocky-Beach.jpg') top center no-repeat;
+	background-size: cover;
+}
+
 .bg-open-field {
 	background: url('./static/images/Background-Open-Field.jpg') top center no-repeat;
 	background-size: cover;
