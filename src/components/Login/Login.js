@@ -6,11 +6,9 @@ import AppLogo from '../AppLogo'
 
 function Login(){
 
-	
 	const [username, setUsername] = useState('')
 	const [password, setPassword] = useState('')
 
-	
 	useEffect(() => {
 		
 	}, [])

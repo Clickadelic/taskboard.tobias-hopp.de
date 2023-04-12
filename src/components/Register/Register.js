@@ -42,7 +42,7 @@ function Register(){
 					<span className="block m-auto">Hilfe</span>
 				</button>
 			</header>
-			<section className="bg-yellow-500 p-12 rounded">
+			<section className="bg-white-500 p-12 rounded">
 				<p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
 				<h1 className="text-2xl mb-1">Registrieren</h1>
 				<p className="mb-8">Bitte registrieren Sie sich mit Ihrer E-Mail Adresse und einem Passwort. Ein Administrator wird Sie freischalten.</p>
