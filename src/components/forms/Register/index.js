@@ -123,7 +123,7 @@ const Register = () => {
 
                         <label htmlFor="password" className="flex text-lg text-slate-700 font-bold mb-2">
                             Password:
-                            <FontAwesomeIcon icon={faCheck} className={validPwd ? "block" : "hidden"} />
+                            <FontAwesomeIcon icon={faCheck} className={validPwd ? "block text-green-300 mt-1 mx-2" : "hidden"} />
                             <FontAwesomeIcon icon={faTimes} className={validPwd || !pwd ? "hidden" : "block text-red-500 mt-1 mx-2"} />
                         </label>
                         <input
@@ -153,8 +153,8 @@ const Register = () => {
 
                         <label htmlFor="confirm_pwd"  className="flex text-lg text-slate-700 font-bold mb-2">
                             Confirm Password:
-                            <FontAwesomeIcon icon={faCheck} className={validMatch && matchPwd ? "block" : "hidden"} />
-                            <FontAwesomeIcon icon={faTimes} className={validMatch || !matchPwd ? "hidden" : "block"} />
+                            <FontAwesomeIcon icon={faCheck} className={validMatch && matchPwd ? "block text-green-300 mt-1 mx-2" : "hidden"} />
+                            <FontAwesomeIcon icon={faTimes} className={validMatch || !matchPwd ? "hidden" : "block mt-1 mx-2 text-red-500"} />
                         </label>
                         <input
                             type="password"
