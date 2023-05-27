@@ -1192,13 +1192,8 @@ input:checked + div svg {
   display: block;
 }
 
-.bg-rocky-beach {
-  background: url('./static/images/Background-Rocky-Beach.jpg') top center no-repeat;
-  background-size: cover;
-}
-
-.bg-open-field {
-  background: url('./static/images/Background-Open-Field.jpg') top center no-repeat;
+.bg-mountain-beach {
+  background: url('./static/images/Mountain-Beach.jpg') top center no-repeat;
   background-size: cover;
 }
 
@@ -1345,10 +1340,6 @@ input:checked + div svg {
 
   .md\:pt-24 {
     padding-top: 6rem;
-  }
-
-  .md\:pt-36 {
-    padding-top: 9rem;
   }
 }
 

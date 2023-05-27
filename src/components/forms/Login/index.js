@@ -19,7 +19,7 @@ function Login(){
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const myRegisterRequest = fetch('https://api.tobias-hopp.de/common/v1/register/', {
+		const myRegisterRequest = fetch(process.env.REACT_APP_API_URL, {
 			method: 'POST',
 			headers: {
 				"Content-Type": "application/json"
