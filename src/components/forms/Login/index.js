@@ -18,11 +18,37 @@ function Login(){
 		setErrMsg('')
 	}, [user, pwd])
 
-	function handleSubmit(){
+	const credentials = {
+		username: user,
+		password: pwd
+	}
+	const handleSubmit = async (e) => {
+		e.preventDefault()
+		
+		const result = fetch(`http://localhost:5000/common/v1/login`, {
+			method: 'POST',
+			headers: {
+				"Content-Type": "application/json",
+				withCredentials: true
+			},
+			body: JSON.stringify({credentials})
+		}).then(response => console.log(response.status) || response) // output the status and return response
+		.then(response => response.text()) // send response body to next then chain
+		.then(body => console.log(body))
+		console.log(result)
+		setUser('')
+		setPwd('')
+		setSuccess(true)
 
 	}
 	return(
-		<section className="bg-white p-4 rounded">
+		<>
+		{ success ? (
+			<section>
+				<h1 className="text-2xl bg-white text-slate-900">Success</h1>
+			</section>
+		) : (
+			<section className="bg-white p-4 rounded">
 			<p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
 			<h1 className="text-2xl mb-3">Login</h1>
 			<form className="w-full" onSubmit={handleSubmit}>
@@ -56,6 +82,11 @@ function Login(){
 				<button className="rounded bg-sky-600 hover:bg-sky-700 p-2 text-lg w-full text-white">Anmelden</button>
 			</form>
 		</section>
+		)
+			
+		}
+		
+		</>
 	)
 }
 
