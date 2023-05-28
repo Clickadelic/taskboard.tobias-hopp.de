@@ -60,8 +60,7 @@ const Register = () => {
             const result = fetch(`http://api.tobias-hopp.de/common/v1/register`, {
 				method: 'post',
 				headers: {
-					'Content-Type': 'application/json',
-					withCredentials: true
+					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify(credentials)
 			}).then(response => {
