@@ -59,6 +59,7 @@ const Register = () => {
         try {
             const result = fetch(`https://api.tobias-hopp.de/common/v1/register`, {
 				method: 'post',
+				mode: 'no-cors',
 				headers: {
 					'Content-Type': 'application/json'
 				},
