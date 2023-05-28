@@ -57,7 +57,7 @@ const Register = () => {
 			password_repeat: matchPwd
 		}
         try {
-            const result = fetch(`http://api.tobias-hopp.de/common/v1/register`, {
+            const result = fetch(`https://api.tobias-hopp.de/common/v1/register`, {
 				method: 'post',
 				headers: {
 					'Content-Type': 'application/json'
