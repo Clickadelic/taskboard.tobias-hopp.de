@@ -2,15 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Login from './components/forms/Login'
-import Register from './components/forms/Register'
-import Auth from './auth/Auth'
 import App from './App'
+import Register from './components/Forms/Register'
+import Login from './components/Forms/Login'
+import ForgotPassword from './components/Forms/ForgotPassword'
+import Auth from './auth/Auth'
 import Error404 from './routes/Error404'
 import ProtectedRoute from './utilities/ProtectedRoute'
 import Dashboard from './routes/Dashboard'
 import './index.css';
-import ForgotPassword from './components/forms/ForgotPassword'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

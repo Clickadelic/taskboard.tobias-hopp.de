@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRef, useState, useEffect, } from 'react'
+import { Link } from 'react-router-dom'
 
 function Login(){
 	const userRef = useRef('')
@@ -24,21 +25,25 @@ function Login(){
 	}
 	const handleSubmit = async (e) => {
 		e.preventDefault()
+		console.log(credentials)
+		// const result = fetch(`https://api.tobias-hopp.de/common/v1/login`, {
+		// 	method: 'POST',
+		// 	headers: {
+		// 		"Content-Type": "application/json",
+		// 		withCredentials: true
+		// 	},
+		// 	body: JSON.stringify({credentials})
+		// })
+		// // output the status and return response
+		// .then(response => console.log(response.status) || response)
+		//  // send response body to next then chain
+		// .then(response => console.log(response.text()))
+		// // 
+		// .then(body => console.log(body.token))
 		
-		const result = fetch(`https://api.tobias-hopp.de/common/v1/login`, {
-			method: 'POST',
-			headers: {
-				"Content-Type": "application/json",
-				withCredentials: true
-			},
-			body: JSON.stringify({credentials})
-		}).then(response => console.log(response.status) || response) // output the status and return response
-		.then(response => response.text()) // send response body to next then chain
-		.then(body => console.log(body))
-		console.log(result)
 		setUser('')
 		setPwd('')
-		setSuccess(true)
+		// setSuccess(true)
 	}
 	return(
 		<>
@@ -49,8 +54,8 @@ function Login(){
 		) : (
 			<section className="bg-white p-4 rounded">
 			<p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-			<h1 className="text-2xl mb-3">Login</h1>
-			<form className="w-full" onSubmit={handleSubmit}>
+			<h2 className="text-2xl mb-3">Login</h2>
+			<form className="w-full mb-4" onSubmit={handleSubmit}>
 				<div className="mb-4">
 					<label htmlFor="username" className="flex text-lg text-slate-700 font-bold mb-2">Username:</label>
 					<input
@@ -79,6 +84,7 @@ function Login(){
 					/>
 				</div>
 				<button className="rounded bg-sky-600 hover:bg-sky-700 p-2 text-lg w-full text-white">Anmelden</button>
+				<p>Noch kein Account? Hier <a href="/auth/register">registrieren</a>.</p>
 			</form>
 		</section>
 		)
