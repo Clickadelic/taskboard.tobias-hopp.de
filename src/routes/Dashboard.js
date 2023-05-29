@@ -6,7 +6,7 @@ function Dashboard() {
     <div class="breadcrumb-navigation mb-6">
       <ul class="flex">
         <li><a href="/">WebDev HQ</a></li>
-        <li><a href="#">Todos</a></li>
+        <li><a href="/">Todos</a></li>
       </ul>
     </div>
     <main class="md:w-full">

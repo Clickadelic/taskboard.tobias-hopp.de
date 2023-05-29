@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
+import Logo from '../../Logo';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -22,6 +23,8 @@ const Register = () => {
     const [matchPwd, setMatchPwd] = useState('');
     const [validMatch, setValidMatch] = useState(false);
     const [matchFocus, setMatchFocus] = useState(false);
+
+
 
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
@@ -97,15 +100,15 @@ const Register = () => {
     return (
         <>
             {success ? (
-                <section className="w-96 m-auto bg-white p-4">
+                <section className="bg-white p-4">
                     <div className="bg-green-200 p-3 rounded">
-						<h1 className="text-base font-bold">Registration successful!</h1>
+						<h2 className="text-base font-bold">Registration successful!</h2>
 					</div>
                 </section>
             ) : (
-                <section className="bg-white p-4 rounded">
+				<section className="bg-white p-4 rounded">
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-                    <h1 className="text-2xl mb-3">Register</h1>
+                    <h2 className="text-2xl mb-3">Register</h2>
                     <form onSubmit={handleSubmit}>
 						<div className="mb-4">
 							<label htmlFor="username" className="flex text-lg text-slate-700 font-bold mb-2">
