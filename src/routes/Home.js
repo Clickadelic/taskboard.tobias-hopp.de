@@ -2,7 +2,6 @@ import React from 'react'
 import {NavLink, Link} from 'react-router-dom'
 import AppIcon from '../components/AppIcon'
 
-
 function Home() {
 	return (
 		<div className="bg-black bg-black-gradient-tr">

@@ -11,6 +11,8 @@ import Error404 from './routes/Error404'
 import ProtectedRoute from './utilities/ProtectedRoute'
 import Dashboard from './routes/Dashboard'
 import './index.css';
+import dotenv from 'dotenv'
+dotenv.config()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -25,12 +27,7 @@ root.render(
 					<Route path='forgot-password' element={<ForgotPassword />} />
 				</Route>
 				<Route path="/" element={<App />}>
-					<Route path='/' element={
-						<ProtectedRoute>
-							<Dashboard />
-						</ProtectedRoute>
-					} />
-					<Route path='/overview' element={
+					<Route path='/dashboard' element={
 						<ProtectedRoute>
 							<Dashboard />
 						</ProtectedRoute>
