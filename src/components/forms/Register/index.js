@@ -2,7 +2,6 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
-import { Link } from 'react-router-dom';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -62,7 +61,7 @@ const Register = () => {
 			password_repeat: matchPwd
 		}
         try {
-            const result = fetch(`https://api.tobias-hopp.de/common/v1/register`, {
+            const result = fetch("https://api.tobias-hopp.de/common/v1/register", {
 				method: 'post',
 				headers: {
 					'Content-Type': 'application/json'
@@ -82,6 +81,7 @@ const Register = () => {
 				// handle the error
 				console.log(error)
 			})
+			console.log(result)
             setUser('')
             setPwd('')
             setMatchPwd('')
