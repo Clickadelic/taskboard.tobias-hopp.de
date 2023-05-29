@@ -1,6 +1,5 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-
 import AuthLayout from './layout/AuthLayout'
 
 import {useState, useEffect} from 'react'
@@ -10,7 +9,7 @@ function App() {
 
 	const [isLoggedIn, setIsLoggedIn] = useState(true)
 	const checkUserToken = () => {
-    const userToken = localStorage.getItem('user-token');
+    const userToken = localStorage.getItem('token');
 
     if (!userToken || userToken === 'undefined') {
 			setIsLoggedIn(false);
@@ -21,7 +20,7 @@ function App() {
     useEffect(() => {
         checkUserToken();
     }, [isLoggedIn]);
-	
+	console.log(process.env.REACT_APP_API_URL)
 	return (
 		<div className="bg-slate-200 min-h-screen">
 			{isLoggedIn && <AuthLayout />}
