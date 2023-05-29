@@ -1,5 +1,4 @@
 import React from "react";
-// import logoSrc from "../../static/images/bcl/bcl_logo.png"
 
 const AuthLayout = () => {
     return (

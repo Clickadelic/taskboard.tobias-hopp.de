@@ -11,8 +11,6 @@ import Error404 from './routes/Error404'
 import ProtectedRoute from './utilities/ProtectedRoute'
 import Dashboard from './routes/Dashboard'
 import './index.css';
-import dotenv from 'dotenv'
-dotenv.config()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

@@ -20,7 +20,7 @@ function App() {
     useEffect(() => {
         checkUserToken();
     }, [isLoggedIn]);
-	console.log(process.env.REACT_APP_API_URL)
+	
 	return (
 		<div className="bg-slate-200 min-h-screen">
 			{isLoggedIn && <AuthLayout />}
