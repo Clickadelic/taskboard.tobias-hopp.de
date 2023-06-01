@@ -1,5 +1,5 @@
 import React from 'react'
-import {NavLink, Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 
 
 function Home() {
@@ -8,7 +8,7 @@ function Home() {
 			<header className="absolute inset-x-0 top-0 z-50">
 				<nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
 					<div className="flex lg:flex-1">
-						<a href="https://www.tobias-hopp.de">Tobias Hopp</a>
+						<a href="https://www.tobias-hopp.de" target="_blank" title="Portfolio Tobias Hopp">Tobias Hopp</a>
 					</div>
 					<div className="flex lg:hidden">
 						<button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
@@ -19,13 +19,13 @@ function Home() {
 						</button>
 					</div>
 					<div className="hidden lg:flex lg:gap-x-12">
-						<NavLink href="/" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-sky-600 leading-6">Products</NavLink>
-						<NavLink href="/" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-sky-600 leading-6">About</NavLink>
-						<NavLink href="/" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-sky-600 leading-6">Administration</NavLink>
-						<NavLink href="/" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-sky-600 leading-6">Company</NavLink>
+						<a href="https://sandbox.tobias-hopp.de/" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-sky-600 leading-6" target="_blank">Sandbox</a>
+						<a href="/" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-sky-600 leading-6">About</a>
+						<a href="/" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-sky-600 leading-6">Administration</a>
+						<a href="/" className="text-sm font-medium rounded-md border border-1 px-3 py-1 text-white hover:text-sky-600 leading-6">Company</a>
 					</div>
 					<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-						<NavLink to="./auth/login" className="text-sm font-semibold leading-6 text-white hover:text-sky-600 hover:ring">Log in <span aria-hidden="true">&rarr;</span></NavLink>
+						<Link to="/auth/login" className="text-sm font-semibold leading-6 text-white hover:text-sky-600 hover:ring">Login<span aria-hidden="true">&rarr;</span></Link>
 					</div>
 				</nav>
 				<div className="lg:hidden" role="dialog" aria-modal="true">
@@ -67,8 +67,8 @@ function Home() {
 						<h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Toby's Dashboard</h1>
 						<p className="mt-6 text-lg leading-8 text-white">Chaos redefined.</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
-							<Link to="/auth/login" className="rounded-md bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600">Go to Login</Link>
-							<Link to="/demo" className="text-sm font-semibold leading-6 text-sky-600">More information<span aria-hidden="true">→</span></Link>
+							<Link to="/auth/login" className="rounded-md bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600">Zum Login</Link>
+							<Link to="/auth/register/" className="text-sm font-semibold leading-6 text-sky-600">Registrieren<span aria-hidden="true">→</span></Link>
 						</div>
 					</div>
 				</div>
