@@ -24,18 +24,16 @@ root.render(
 					<Route path='register' element={<Register />} />
 					<Route path='forgot-password' element={<ForgotPassword />} />
 				</Route>
+				<ProtectedRoute>
 				<Route path="/" element={<App />}>
 					<Route path='/' element={
-						<ProtectedRoute>
-							<Dashboard />
-						</ProtectedRoute>
+						<Dashboard />
 					} />
 					<Route path='/projects' element={
-						<ProtectedRoute>
-							<Projects />
-						</ProtectedRoute>
+						<Projects />
 					} />
 				</Route>
+				</ProtectedRoute>
 				<Route path='*' element={<Error404 />} />
 			</Routes>
 		</BrowserRouter>

@@ -2,57 +2,58 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
-  const userRef = useRef('');
-  const pwdRef = useRef('');
+	const userRef = useRef('');
+	const pwdRef = useRef('');
 
-  const [user, setUser] = useState('');
-  const [pwd, setPwd] = useState('');
-  const [errMsg, setErrMsg] = useState('');
-  const [success, setSuccess] = useState(false);
+	const [user, setUser] = useState('');
+	const [pwd, setPwd] = useState('');
+	const [errMsg, setErrMsg] = useState('');
+	const [success, setSuccess] = useState(false);
 
-  const navigate = useNavigate();
+	const navigate = useNavigate();
 
-  useEffect(() => {
-    userRef.current.focus();
-  }, []);
+	useEffect(() => {
+		userRef.current.focus();
+	}, []);
 
-  useEffect(() => {
-    setErrMsg('');
-  }, [user, pwd]);
+	useEffect(() => {
+		setErrMsg('');
+	}, [user, pwd]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const credentials = {
-      username: user,
-      password: pwd,
-    };
-    try {
-      const res = await fetch(
-        "https://api.tobias-hopp.de/common/v1/login",
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(credentials),
-        }
-      );
-      const response = await res.json();
-      if (res.status === 200) {
-        localStorage.setItem('token', response.token);
-        setTimeout(() => {
-			navigate('/dashboard');
-		}, 1000)
-      } else {
-        setErrMsg('Invalid Credentials. Please try again.');
-      }
-    } catch (err) {
-      console.error(err);
-    }
-    setUser('');
-    setPwd('');
-	setSuccess(true)
-  };
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		const credentials = {
+		username: user,
+		password: pwd,
+	};
+
+	try {
+		const res = await fetch(
+		"https://api.tobias-hopp.de/common/v1/login", {
+			method: 'POST',
+			headers: {
+			'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(credentials)
+		});
+		const response = await res.json();
+		if (res.status === 200) {
+			localStorage.setItem('token', response.token);
+			setUser('');
+    		setPwd('');
+			setSuccess(true);
+			setTimeout(() => {
+				navigate('/');
+			}, 1000)
+		} else if(res.status === 400) {
+			setErrMsg('Invalid Credentials. Please try again.');
+		}
+	} catch (err) {
+		setErrMsg(err)
+	}
+		setUser('');
+		setPwd('');
+	};
 
   return (
     <>
@@ -76,7 +77,7 @@ function Login() {
                 htmlFor="username"
                 className="flex text-lg text-slate-700 font-bold mb-2"
               >
-                Username:
+                Benutzername:
               </label>
               <input
                 type="text"
@@ -86,7 +87,7 @@ function Login() {
                 onChange={(e) => setUser(e.target.value)}
                 className="block p-3 bg-slate-200 text-lg rounded w-full mb-3"
                 value={user}
-                placeholder="Username"
+                placeholder="Benutzername"
                 required
               />
             </div>
@@ -95,7 +96,7 @@ function Login() {
                 htmlFor="password"
                 className="flex text-lg text-slate-700 font-bold mb-2"
               >
-                Password:
+                Passwort:
               </label>
               <input
                 type="password"
@@ -104,15 +105,15 @@ function Login() {
                 onChange={(e) => setPwd(e.target.value)}
                 className="block p-3 bg-slate-200 text-lg rounded w-full mb-3"
                 value={pwd}
-                placeholder="Password"
+                placeholder="Passwort"
                 required
               />
             </div>
             <button className="rounded bg-sky-600 hover:bg-sky-700 p-2 text-lg w-full text-white">
               Anmelden
             </button>
-				<p>Noch kein Account? Hier <a href="/auth/register">registrieren</a>.</p>
 			</form>
+			<p>Noch kein Account? Hier <a href="/auth/register">registrieren</a>.</p>
 		</section>
 		)
 			
