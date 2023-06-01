@@ -9,9 +9,10 @@ function App() {
 
 	const [isLoggedIn, setIsLoggedIn] = useState(true)
 	const checkUserToken = () => {
+		
     const userToken = localStorage.getItem('token');
 
-    if (!userToken || userToken === 'undefined') {
+    	if (!userToken || userToken === 'undefined') {
 			setIsLoggedIn(false);
 		}
 		setIsLoggedIn(true);

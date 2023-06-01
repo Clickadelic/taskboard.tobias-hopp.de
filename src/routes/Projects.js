@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Projects() {
-  return (
+	return (
 	<div class="pt-16 pl-4 pr-4 md:pl-72 md:pt-24 md:w-full min-h-screen">
 		<div class="breadcrumb-navigation mb-6">
 			<ul class="flex">
@@ -32,7 +32,7 @@ function Projects() {
 			</div>
 		</main>
 	</div>
-  )
+	)
 }
 
 export default Projects
