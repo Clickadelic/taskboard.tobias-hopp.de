@@ -1,13 +1,13 @@
 import React from "react";
 
-const AuthLayout = () => {
+const AuthLayout = ({children}) => {
     return (
 		<>
 			<aside className="App-sidebar Auth-Sidebar hidden md:block fixed top-0 left-0 w-64 min-h-screen bg-white shadow">
 				<div className="App-sidebar-logo flex justify-center px-2 py-3">
 					<h1 className="text-2xl">
 						{/* <img src={logoSrc} className="logo inline mr-2 -mt-1" alt="BCL Logo" /> */}
-						<span className="inline font-medium">Company Name</span>
+						<a href="/" className="inline font-medium">Dashboard</a>
 					</h1>
 				</div>
 				<section className="sidebar-section mt-10 mb-6">
@@ -22,7 +22,7 @@ const AuthLayout = () => {
 						</span>
 					</h2>
 					<ul className="sidebar-nav">
-						<li><a href="/projekte" className="block px-4 py-2 hover:bg-slate-100 hover:border-r-2 border-slate-400">Projektübersicht</a></li>
+						<li><a href="/projects" className="block px-4 py-2 hover:bg-slate-100 hover:border-r-2 border-slate-400">Projekte</a></li>
 						<li><a href="/" className="block px-4 py-2 hover:bg-slate-100 hover:border-r-2 border-slate-400">Projektübersicht</a></li>
 						<li><a href="/" className="block px-4 py-2 hover:bg-slate-100 hover:border-r-2 border-slate-400">Projektübersicht</a></li>
 						<li><a href="/" className="block px-4 py-2 hover:bg-slate-100 hover:border-r-2 border-slate-400">Projektübersicht</a></li>
@@ -115,6 +115,17 @@ const AuthLayout = () => {
 					</ul>
 				</nav>
 			</header>
+			<div class="pt-16 pl-4 pr-4 md:pl-72 md:pt-24 md:w-full min-h-screen">
+				<div class="breadcrumb-navigation mb-6">
+					<ul class="flex">
+						<li><a href="/">WebDev HQ</a></li>
+						<li><a href="/">Todos</a></li>
+					</ul>
+				</div>
+				<main class="md:w-full">
+					{children}
+				</main>
+			</div>
 		</>
     );
 }

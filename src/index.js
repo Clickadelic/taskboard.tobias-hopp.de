@@ -10,6 +10,7 @@ import Auth from './auth/Auth'
 import Error404 from './routes/Error404'
 import ProtectedRoute from './utilities/ProtectedRoute'
 import Dashboard from './routes/Dashboard'
+import Projects from './routes/Projects'
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -29,9 +30,9 @@ root.render(
 							<Dashboard />
 						</ProtectedRoute>
 					} />
-					<Route path='/dashboard' element={
+					<Route path='/projects' element={
 						<ProtectedRoute>
-							<Dashboard />
+							<Projects />
 						</ProtectedRoute>
 					} />
 				</Route>
