@@ -24,7 +24,6 @@ root.render(
 					<Route path='register' element={<Register />} />
 					<Route path='forgot-password' element={<ForgotPassword />} />
 				</Route>
-				<ProtectedRoute>
 				<Route path="/" element={<App />}>
 					<Route path='/' element={
 						<ProtectedRoute>
@@ -37,7 +36,6 @@ root.render(
 						</ProtectedRoute>
 					} />
 				</Route>
-				</ProtectedRoute>
 				<Route path='*' element={<Error404 />} />
 			</Routes>
 		</BrowserRouter>
