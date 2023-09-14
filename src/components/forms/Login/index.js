@@ -29,10 +29,10 @@ function Login() {
 
 	try {
 		const res = await fetch(
-		"https://api.tobias-hopp.de/common/v1/login", {
+		"https://api.tobias-hopp.de/common/v1/auth/login", {
 			method: 'POST',
 			headers: {
-			'Content-Type': 'application/json',
+				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(credentials)
 		});
