@@ -5,15 +5,20 @@ import { useNavigate } from "react-router-dom";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-
+const EMAIL_REGEX = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
 const Register = () => {
 	const navigate = useNavigate()
     const userRef = useRef();
+    const emailRef = useRef();
     const errRef = useRef();
 	
-    const [user, setUser] = useState('');
-    const [validName, setValidName] = useState(false);
-    const [userFocus, setUserFocus] = useState(false);
+	const [user, setUser] = useState('');
+	const [validName, setValidName] = useState(false);
+	const [userFocus, setUserFocus] = useState(false);
+
+	const [email, setEmail] = useState('');
+	const [validEmail, setValidEmail] = useState(false);
+	const [emailFocus, setEmailFocus] = useState(false);
 
     const [pwd, setPwd] = useState('');
     const [validPwd, setValidPwd] = useState(false);
@@ -36,6 +41,10 @@ const Register = () => {
         setValidName(USER_REGEX.test(user));
     }, [user])
 
+	useEffect(() => {
+        setValidEmail(EMAIL_REGEX.test(email));
+    }, [email])
+
     useEffect(() => {
         setValidPwd(PWD_REGEX.test(pwd));
         setValidMatch(pwd === matchPwd);
@@ -57,6 +66,7 @@ const Register = () => {
         }
 		const credentials = {
 			username: user,
+			email: email,
 			password: pwd,
 			password_repeat: matchPwd
 		}
@@ -71,7 +81,6 @@ const Register = () => {
 				// handle the response
 				if(response.status === 201) {
 					setSuccess(true)
-					console.log(response)
 					navigate('/')
 				} else if(response.status === 400) {
 					alert("Error")
@@ -83,6 +92,7 @@ const Register = () => {
 			})
 			console.log(result)
             setUser('')
+            setEmail('')
             setPwd('')
             setMatchPwd('')
         } catch (err) {
@@ -131,6 +141,31 @@ const Register = () => {
 								className="block p-3 bg-slate-200 text-lg rounded w-full mb-3"
 							/>
 							<p id="uidnote" className={userFocus && user && !validName ? "block p-2 rounded bg-red-100" : "hidden"}>
+								<FontAwesomeIcon icon={faInfoCircle} className="mr-2" />
+								4 to 24 characters. Must begin with a letter. Letters, numbers, underscores, hyphens allowed.
+							</p>
+						</div>
+						<div className="mb-4">
+							<label htmlFor="email" className="flex text-lg text-slate-700 font-bold mb-2">
+								E-Mail:
+								<FontAwesomeIcon icon={faCheck} className={validEmail ? "block mx-2 mt-1 text-green-300" : "hidden"} />
+								<FontAwesomeIcon icon={faTimes} className={validEmail || !email ? "hidden" : "block mx-2 mt-1 text-red-300"} />
+							</label>
+							<input
+								type="text"
+								id="email"
+								ref={emailRef}
+								autoComplete="off"
+								onChange={(e) => setEmail(e.target.value)}
+								required
+								aria-invalid={validEmail ? "false" : "true"}
+								aria-describedby="emailnote"
+								onFocus={() => setEmailFocus(true)}
+								onBlur={() => setEmailFocus(false)}
+								placeholder="Benutzername"
+								className="block p-3 bg-slate-200 text-lg rounded w-full mb-3"
+							/>
+							<p id="emailnote" className={emailFocus && email && !validEmail ? "block p-2 rounded bg-red-100" : "hidden"}>
 								<FontAwesomeIcon icon={faInfoCircle} className="mr-2" />
 								4 to 24 characters. Must begin with a letter. Letters, numbers, underscores, hyphens allowed.
 							</p>
