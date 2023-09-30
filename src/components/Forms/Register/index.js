@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const EMAIL_REGEX = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
 const Register = () => {
 	const navigate = useNavigate()
     const userRef = useRef();
@@ -59,8 +60,9 @@ const Register = () => {
 		
         // if button enabled with JS hack
         const v1 = USER_REGEX.test(user);
-        const v2 = PWD_REGEX.test(pwd);
-        if (!v1 || !v2) {
+        const v2 = EMAIL_REGEX.test(email);
+        const v3 = PWD_REGEX.test(pwd);
+        if (!v1 || !v2 ||!v3) {
             setErrMsg("Invalid Entry");
             return;
         }
