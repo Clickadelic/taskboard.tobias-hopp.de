@@ -31,7 +31,7 @@ function HeaderSidebar() {
 					<h1 className="text-2xl">
 						<Link href="/">
 							<Image src={logoSrc} className={`${isSidebarOpen == true ? 'logo inline -mt-1' : 'logo inline mr-2 -mt-1'}`}  alt="WebDev HQ Logo" />
-							<span className={`${isSidebarOpen == true ? 'hidden' : ''}`}><span className="web">Web</span><span className='dev-hq font-medium'>Dev HQ</span></span>
+							<span className={`${isSidebarOpen == true ? 'hidden' : ''}`}><span className='font-medium'>Dashboard</span></span>
 						</Link>
 					</h1>
 				</div>
@@ -40,25 +40,7 @@ function HeaderSidebar() {
 						<li>
 							<Link href="/dashboard" className="flex p-3 hover:bg-slate-100 hover:border-r-2 hover:border-r-slate-200">
 								<Speedometer2 size={24} />
-								<span className={`${isSidebarOpen == true ? 'hidden' : 'inline-block ml-4 font-medium'}`}>Overview</span>
-							</Link>
-						</li>
-						<li>
-							<Link href="/todos" className="flex p-3 hover:bg-slate-100 hover:border-r-2 hover:border-r-slate-200">
-								<ListCheck size={24} />
-								<span className={`${isSidebarOpen == true ? 'hidden' : 'inline-block ml-4 font-medium'}`}>Todos</span>
-							</Link>
-						</li>
-						<li>
-							<Link href="/links" className="flex p-3 hover:bg-slate-100 hover:border-r-2 hover:border-r-slate-200">
-								<ListStars size={24} />
-								<span className={`${isSidebarOpen == true ? 'hidden' : 'inline-block ml-4 font-medium'}`}>Links</span>
-							</Link>
-						</li>
-						<li>
-							<Link href="/api-keys" className="flex p-3 hover:bg-slate-100 hover:border-r-2 hover:border-r-slate-200">
-								<Speedometer2 size={24} />
-								<span className={`${isSidebarOpen == true ? 'hidden' : 'inline-block ml-4 font-medium'}`}>API-Keys</span>
+								<span className={`${isSidebarOpen == true ? 'hidden' : 'flex ml-4 font-medium'}`}>Overview</span>
 							</Link>
 						</li>
 					</ul>
