@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary: #066da1;
+	--secondary: #b8b8b8;
+}
+
+.public-layout {
+	header {
+		padding: 2rem;
+		background-color: red;
+	}
+}
