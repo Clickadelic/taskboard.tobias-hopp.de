@@ -1,10 +1,9 @@
-import React from 'react'
-import PublicNavbar from '@/components/PublicNavbar';
-
 function Home() {
 	return (
-		<div>Frontpage Content</div>
-	)
+		<div className="centerbox">
+			<h1>Toby&apos;s Dashboard</h1>
+		</div>
+	);
 }
 
-export default Home
+export default Home;

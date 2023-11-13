@@ -1,17 +1,9 @@
-import React from 'react'
-import PublicNavbar from '@/components/PublicNavbar'
-import Footer from '@/components/Footer'
-
-function PublicLayout({children}) {
+function PublicLayout({ children }) {
 	return (
 		<div className="public-layout">
-			<PublicNavbar />
-			<main style={{minHeight: "300px"}}>
-				{children}
-			</main>
-			<Footer />
+			<main>{children}</main>
 		</div>
-	)
+	);
 }
 
-export default PublicLayout
+export default PublicLayout;
