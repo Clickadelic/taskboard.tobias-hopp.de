@@ -1,7 +1,11 @@
 # NextJS
 node_modules
 .next
+.env
+.env*.local
+.vercel
 
+next-env.d.ts
 # Logs
 logs
 *.log
