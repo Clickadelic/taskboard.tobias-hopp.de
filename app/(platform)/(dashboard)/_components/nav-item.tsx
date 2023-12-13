@@ -47,6 +47,11 @@ export const NavItem = ({ isExpanded, isActive, organization, onExpand }: NavIte
 			href: `/organization/${organization.id}/billing`
 		}
 	];
+
+	const onClick = (href: string) => {
+		router.push(href);
+	};
+
 	return (
 		<AccordionItem value={organization.id} className="border-none">
 			<AccordionTrigger
