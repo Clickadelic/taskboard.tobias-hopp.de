@@ -15,7 +15,7 @@ export type State = {
 
 const CreateBoard = z.object({
 	title: z.string().min(3, {
-		message: "Minimun length of 3 characters is required"
+		message: "Minimun length of 3 letters is required"
 	})
 });
 
@@ -27,7 +27,7 @@ export async function create(prevState: State, formData: FormData) {
 	if (!validatedFields.success) {
 		return {
 			errors: validatedFields.error.flatten().fieldErrors,
-			message: "Missing fields"
+			message: "Missing fields."
 		};
 	}
 
