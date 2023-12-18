@@ -16,7 +16,8 @@ export const Form = () => {
 	});
 	const onSubmit = (formdata: FormData) => {
 		const title = formdata.get("title") as string;
-		execute({ title });
+		const image = formdata.get("image") as string;
+		execute({ title, image });
 	};
 	return (
 		<form action={onSubmit}>
