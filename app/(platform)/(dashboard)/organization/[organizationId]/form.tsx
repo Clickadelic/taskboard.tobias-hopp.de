@@ -17,6 +17,9 @@ export const Form = () => {
 	const onSubmit = (formdata: FormData) => {
 		const title = formdata.get("title") as string;
 		const image = formdata.get("image") as string;
+
+		console.log("Title is:", { title });
+		console.log("Image is:", { image });
 		execute({ title, image });
 	};
 	return (

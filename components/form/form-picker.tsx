@@ -45,7 +45,7 @@ export const FormPicker = ({ id, errors }: FormPickerProps) => {
 	}, []);
 	if (isLoading) {
 		return (
-			<div className="p-6 flex items-center">
+			<div className="p-6 flex items-center justify-center">
 				<Loader2 className="w-6 h-6 text-sky-700 animate-spin" />
 			</div>
 		);
@@ -56,10 +56,9 @@ export const FormPicker = ({ id, errors }: FormPickerProps) => {
 				{images.map(image => (
 					<div
 						key={image.id}
-						className={cn("cursor-pointer relative aspect-video group hover:opacity-75", pending && "opacity-50 hover:opacity:50 cursor-auto")}
+						className={cn("cursor-pointer relative aspect-video group hover:opacity-75 transition bg-muted", pending && "opacity-50 hover:opacity:50 cursor-auto")}
 						onClick={() => {
 							if (pending) return;
-							console.log(image.id, "Selected Image");
 							setSelectedImageId(image.id);
 						}}
 					>
@@ -71,7 +70,7 @@ export const FormPicker = ({ id, errors }: FormPickerProps) => {
 							readOnly
 							checked={selectedImageId === image.id}
 							disabled={pending}
-							value={`${image.id} | ${image.urls.thumb} | ${image.urls.full} | ${image.links.html} | ${image.user.name}`}
+							value={`${image.id}|${image.urls.thumb}|${image.urls.full}|${image.links.html}|${image.user.name}`}
 						/>
 						<Image fill src={image.urls.thumb} className="object-cover rounded-sm" alt="Unsplash image" />
 						{selectedImageId === image.id && (
