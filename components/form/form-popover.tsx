@@ -6,7 +6,6 @@ import { createBoard } from "@/actions/create-board";
 import { FormInput } from "./form-input";
 import { FormSubmit } from "./form-submit";
 import { Button } from "@/components/ui/button";
-import { useFormState } from "react-dom";
 import { toast } from "sonner";
 import { FormPicker } from "./form-picker";
 
@@ -20,7 +19,6 @@ interface FormPopoverProps {
 export const FormPopover = ({ children, side = "bottom", align, sideOffset = 0 }: FormPopoverProps) => {
 	const { execute, fieldErrors } = useAction(createBoard, {
 		onSuccess: data => {
-			console.log({ data });
 			toast.success("Board created");
 		},
 		onError: error => {
