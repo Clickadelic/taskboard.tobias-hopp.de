@@ -21,8 +21,10 @@ interface CardFormProps {
 }
 
 export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(({ listId, enableEditing, disableEditing, isEditing }, ref) => {
+	
 	const params = useParams();
 	const formRef = useRef<ElementRef<"form">>(null);
+
 	const { execute, fieldErrors } = useAction(createCard, {
 		onSuccess: data => {
 			toast.success(`Card ${data.title} created!`);
@@ -54,7 +56,6 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(({ listId
 		const listId = formData.get("listId") as string;
 		const boardId = params.boardId as string;
 		execute({ title, listId, boardId });
-		console.log({ title, listId, boardId });
 	};
 
 	if (isEditing) {
