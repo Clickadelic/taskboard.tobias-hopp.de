@@ -6,7 +6,7 @@ import { useState } from "react";
 import { ElementRef, useRef } from "react";
 import { CardForm } from "./card-form";
 import { CardItem } from "./card-item";
-import { DragDropContext, Draggable, Droppable } from "@hello-pangea/dnd";
+import { Draggable, Droppable } from "@hello-pangea/dnd";
 
 import { cn } from "@/lib/utils";
 
