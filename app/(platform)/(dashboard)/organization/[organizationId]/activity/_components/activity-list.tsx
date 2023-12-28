@@ -13,7 +13,8 @@ export const ActivityList = async () => {
 	}
 
 	const auditLogs = await db.auditLog.findMany({
-		where: { orgId }
+		where: { orgId },
+		orderBy: { createdAt: "desc" }
 	});
 
 	return (
