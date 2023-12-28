@@ -3,10 +3,11 @@ import { useCardModal } from "@/hooks/use-card-modal";
 import { fetcher } from "@/lib/fetcher";
 import { CardWithList } from "@/types";
 import { useQuery } from "@tanstack/react-query";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 import { Header } from "./header";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Description } from "./description";
+import { Actions } from "./actions";
 
 export const CardModal = () => {
 	const id = useCardModal(state => state.id);
@@ -25,6 +26,7 @@ export const CardModal = () => {
 					<div className="col-span-3">
 						<div className="w-full space-y-6">{!cardData ? <Description.Skeleton /> : <Description data={cardData} />}</div>
 					</div>
+					{!cardData ? <Actions.Skeleton /> : <Actions data={cardData} />}
 				</div>
 			</DialogContent>
 		</Dialog>

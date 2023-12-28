@@ -1,6 +1,6 @@
 "use client";
 
-import { QueryClient, useQueryClient } from "@tanstack/react-query";
+import { useQueryClient } from "@tanstack/react-query";
 import { ElementRef, useRef, useState } from "react";
 import { CardWithList } from "@/types";
 import { Layout } from "lucide-react";
@@ -59,7 +59,7 @@ export const Header = ({ data }: HeaderProps) => {
 					/>
 				</form>
 				<p>
-					in list <span className="underline">{data.list.title}</span>
+					in <span className="underline">{data.list.title}</span>
 				</p>
 			</div>
 		</div>
