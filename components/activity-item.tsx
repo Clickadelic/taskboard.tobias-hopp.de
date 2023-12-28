@@ -15,7 +15,7 @@ export const ActivityItem = ({ data }: ActivityItemProps) => {
 			</Avatar>
 			<div className="flex flex-col space-y-0.5">
 				<p className="text-sm text-muted-foreground">
-					<span className="font-semibold lowercase text-neutral-700">{data.userName}</span>
+					<span className="font-semibold lowercase text-neutral-700 mr-1">{data.userName}</span>
 					{generateLogMessage(data)}
 				</p>
 				<p className="text-xs text-muted-foreground">{format(new Date(data.createdAt), "MMM d, yyyy 'at' h:mm a")}</p>
