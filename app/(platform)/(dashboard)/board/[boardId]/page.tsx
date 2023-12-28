@@ -23,6 +23,7 @@ const BoardIdPage = async ({ params }: BoardIdPageProps) => {
 			}
 		},
 		include: {
+			// BUG: Fix TS Error
 			// @ts-ignore: Unreachable code error
 			cards: {
 				orderBy: {
