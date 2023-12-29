@@ -12,7 +12,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
 	if (!userId || !orgId) {
 		return {
-			error: "Unauthorized"
+			error: "Nicht authorisiert"
 		};
 	}
 
@@ -30,7 +30,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
 		if (!board) {
 			return {
-				error: "Board not found!"
+				error: "Board nicht gefunden"
 			};
 		}
 
@@ -64,7 +64,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 		});
 	} catch (error) {
 		return {
-			error: "Failed to create!"
+			error: "Fehler beim Erstellen der Liste"
 		};
 	}
 

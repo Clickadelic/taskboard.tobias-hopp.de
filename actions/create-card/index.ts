@@ -15,7 +15,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
 	if (!userId || !orgId) {
 		return {
-			error: "Unauthorized"
+			error: "Nicht authorisiert"
 		};
 	}
 
@@ -34,7 +34,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 		});
 		if (!list) {
 			return {
-				error: "List not found"
+				error: "Liste nicht gefunden!"
 			};
 		}
 
@@ -61,7 +61,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 		});
 	} catch (error) {
 		return {
-			error: "Failed to create!"
+			error: "Fehler beim erstellen!"
 		};
 	}
 
