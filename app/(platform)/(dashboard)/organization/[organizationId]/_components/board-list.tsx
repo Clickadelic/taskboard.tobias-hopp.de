@@ -6,6 +6,8 @@ import { FormPopover } from "@/components/form/form-popover";
 import { auth } from "@clerk/nextjs";
 import Link from "next/link";
 import { Skeleton } from "@/components/ui/skeleton";
+import { MAX_FREE_BOARDS } from "@/constants/boards";
+import { getAvailableCount } from "@/lib/org-limit";
 
 export const BoardList = async () => {
 	const { orgId } = auth();
@@ -22,6 +24,8 @@ export const BoardList = async () => {
 			createdAt: "desc"
 		}
 	});
+
+	const availableCount = await getAvailableCount();
 
 	return (
 		<div className="space-y-4">
@@ -44,7 +48,7 @@ export const BoardList = async () => {
 				<FormPopover sideOffset={10} side="right">
 					<div role="button" className="aspect-video relative h-full w-full bg-muted rounded-sm flex flex-col gap-y-1 items-center justify-center hover:opacity-75 transition">
 						<p className="text-sm">Create new Board</p>
-						<span>5 Remaining</span>
+						<span>{`${MAX_FREE_BOARDS - availableCount}`} Remaining</span>
 						<Hint sideOffset={40} description={`Free Workspaces can have up to 5 open boards. For unlimited boards upgrade your workspace.`}>
 							<HelpCircle className="absolute bottom-2 right-2 h-[14px] w-[14px]" />
 						</Hint>
