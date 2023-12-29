@@ -29,7 +29,7 @@ export const ListOptions = ({ data, onAddCard }: ListOptionProps) => {
 			toast.error(error);
 		}
 	});
-	
+
 	const { execute: executeCopy } = useAction(copyList, {
 		onSuccess: data => {
 			toast.success(`List ${data.title} copied!`);
@@ -60,20 +60,20 @@ export const ListOptions = ({ data, onAddCard }: ListOptionProps) => {
 				</Button>
 			</PopoverTrigger>
 			<PopoverContent className="px-0 pt-3 pb-3" side="bottom" align="start">
-				<div className="text-sm font-medium text-center text-neutral-600 pb-4">List Actions</div>
+				<div className="text-sm font-medium text-center text-neutral-600 pb-4">Aktionen</div>
 				<PopoverClose ref={closeRef} asChild>
 					<Button className="h-auto w-auto p-2 absolute top-2 right-2 text-neutral-600" variant="ghost">
 						<X className="h-4 w-4" />
 					</Button>
 				</PopoverClose>
 				<Button onClick={onAddCard} className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm" variant="ghost">
-					Add a card
+					Karte hinzufügen...
 				</Button>
 				<form action={onCopy}>
 					<input hidden name="id" id="id" value={data.id} />
 					<input hidden name="boardId" id="boardId" value={data.boardId} />
 					<FormSubmit className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm" variant="ghost">
-						Copy list...
+						Liste kopieren...
 					</FormSubmit>
 				</form>
 				<Separator />
@@ -81,7 +81,7 @@ export const ListOptions = ({ data, onAddCard }: ListOptionProps) => {
 					<input hidden name="id" id="id" value={data.id} />
 					<input hidden name="boardId" id="boardId" value={data.boardId} />
 					<FormSubmit className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm" variant="ghost">
-						Delete this list...
+						Diese Liste löschen...
 					</FormSubmit>
 				</form>
 			</PopoverContent>

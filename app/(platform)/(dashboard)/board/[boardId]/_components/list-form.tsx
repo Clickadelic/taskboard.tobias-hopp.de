@@ -72,11 +72,11 @@ export const ListForm = () => {
 						errors={fieldErrors}
 						id="title"
 						className="text-sm px-2 py-1 h-7 font-medium border-transparent hover:border-input focus:border-input transition"
-						placeholder="Enter list title..."
+						placeholder="Titel der Liste..."
 					/>
 					<input hidden value={params.boardId} name="boardId" />
 					<div className="flex items-center gap-x-1">
-						<FormSubmit>Add List</FormSubmit>
+						<FormSubmit>Liste hinzufügen</FormSubmit>
 						<Button size="sm" variant="ghost" onClick={disableEditing}>
 							<X className="h-5 w-5" />
 						</Button>
