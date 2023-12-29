@@ -6,6 +6,7 @@ import { redirect } from "next/navigation";
 import { InputType, ReturnType } from "./types";
 import { DeleteBoard } from "./schema";
 import { createSafeAction } from "@/lib/create-safe-action";
+import { decreaseAvailableCount } from "@/lib/org-limit";
 
 import { createAuditlog } from "@/lib/create-audit-log";
 import { ENTITY_TYPE, ACTION } from "@prisma/client";
@@ -29,6 +30,9 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 				orgId
 			}
 		});
+
+		await decreaseAvailableCount();
+
 		await createAuditlog({
 			entityTitle: board.title,
 			entityId: board.id,
