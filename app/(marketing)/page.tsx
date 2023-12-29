@@ -24,15 +24,10 @@ const MarketingPage = () => {
 					<Medal className="h-6 w-6 mr-2" />
 					Toby&apos;s Dashboard
 				</div>
-				<h1 className="text-3xl md:text-6xl text-center text-neutral-800 mb-6">Trellify</h1>
-				<div className="text-3xl md:text-6xl bg-gradient-to-r from-fuchsia-600 to-pink-600 text-white px-4 p-2 rounded-md w-fit">move forward</div>
-				<div className={cn("text-sm md:text-xl text-neutral-400 mt-4 max-w-xl md:max-w-2xl text-center mx-auto", textFont.className)}>
-					Collaborate, manage projects, and reach new productivity peaks. From high rises to home office, the way your team works is unique - accomplish it all with Trellify.
-				</div>
+				<h1 className="text-3xl md:text-6xl text-center text-neutral-800 mb-6">Willkommen</h1>
+				<div className="text-3xl md:text-6xl bg-gradient-to-r from-fuchsia-600 to-pink-600 text-white px-4 p-2 rounded-md w-fit">Toby&apos;s Dashboard</div>
+				<div className={cn("text-sm md:text-xl text-neutral-400 mt-4 max-w-xl md:max-w-2xl text-center mx-auto", textFont.className)}>Alles was der Web-Mensch so braucht!</div>
 			</div>
-			<Button className="mt-6" size="lg" asChild>
-				<Link href="/sign-up">Sign Up</Link>
-			</Button>
 		</div>
 	);
 };
