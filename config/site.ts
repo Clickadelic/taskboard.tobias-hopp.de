@@ -1,4 +1,4 @@
 export const siteConfig = {
-	name: "Toby's Kanban-Board",
-	description: "Todo's, Organisation, Ordnung"
+	name: "Toby's Tasboard",
+	description: "Todo's, Termine, Tätigkeiten"
 };
