@@ -26,7 +26,7 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(({ listId
 
 	const { execute, fieldErrors } = useAction(createCard, {
 		onSuccess: data => {
-			toast.success(`Card ${data.title} created!`);
+			toast.success(`Karte ${data.title} erstellt`);
 			formRef.current?.reset();
 		},
 		onError: error => {
