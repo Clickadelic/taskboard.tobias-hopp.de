@@ -26,24 +26,6 @@ const MarketingPage = () => {
 					<h3 className={cn("text-sm md:text-xl text-neutral-400 mt-4 max-w-xl md:max-w-2xl text-center mx-auto", textFont.className)}>Todo&apos;s, Termine, Tätigkeiten!</h3>
 				</div>
 			</div>
-			<Separator className="w-96 my-12 mx-auto" />
-			<div className="container mx-auto">
-				<h2 className={cn("text-xl md:text-6xl text-center text-neutral-800 mb-6", headingFont.className)}>Projekte</h2>
-				<div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-6">
-					<div className="aspect-radio h-[160px] rounded-md bg-neutral-200 text-neutral-200">Image</div>
-					<div className="aspect-radio h-[160px] rounded-md bg-neutral-200 text-neutral-200">Image</div>
-					<div className="aspect-radio h-[160px] rounded-md bg-neutral-200 text-neutral-200">Image</div>
-					<div className="aspect-radio h-[160px] rounded-md bg-neutral-200 text-neutral-200">Image</div>
-					<div className="aspect-radio h-[160px] rounded-md bg-neutral-200 text-neutral-200">Image</div>
-					<div className="aspect-radio h-[160px] rounded-md bg-neutral-200 text-neutral-200">Image</div>
-					<div className="aspect-radio h-[160px] rounded-md bg-neutral-200 text-neutral-200">Image</div>
-					<div className="aspect-radio h-[160px] rounded-md bg-neutral-200 text-neutral-200">Image</div>
-					<div className="aspect-radio h-[160px] rounded-md bg-neutral-200 text-neutral-200">Image</div>
-					<div className="aspect-radio h-[160px] rounded-md bg-neutral-200 text-neutral-200">Image</div>
-					<div className="aspect-radio h-[160px] rounded-md bg-neutral-200 text-neutral-200">Image</div>
-					<div className="aspect-radio h-[160px] rounded-md bg-neutral-200 text-neutral-200">Image</div>
-				</div>
-			</div>
 		</>
 	);
 };
