@@ -38,7 +38,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 		});
 	} catch (error) {
 		return {
-			error: "Failed to delete!"
+			error: "Fehler beim Löschen der Karte!"
 		};
 	}
 

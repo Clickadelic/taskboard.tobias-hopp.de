@@ -25,7 +25,7 @@ export const Form = () => {
 			<div className="flex flex-col space-y-2">
 				<FormInput id="title" label="Board title" errors={fieldErrors} />
 			</div>
-			<FormSubmit>Save</FormSubmit>
+			<FormSubmit>Speichern</FormSubmit>
 		</form>
 	);
 };

@@ -55,7 +55,7 @@ export const Description = ({ data }: DescriptionProps) => {
 			queryClient.invalidateQueries({
 				queryKey: ["card-logs", data.id]
 			});
-			toast.success(`Card ${data.title} updated!`);
+			toast.success(`Karte ${data.title} gespeichert!`);
 			disableEditing();
 		},
 		onError: error => {
@@ -72,27 +72,20 @@ export const Description = ({ data }: DescriptionProps) => {
 		<div className="flex items-start gap-x-3 w-full">
 			<AlignLeft className="h-5 w-5 mt-0.5 text-neutral-700" />
 			<div className="w-full">
-				<p className="font-semibold text-neutral-700 mb-2">Description</p>
+				<p className="font-semibold text-neutral-700 mb-2">Details</p>
 				{isEditing ? (
 					<form action={onSubmit} ref={formRef} className="space-y-2">
-						<FormTextarea
-							ref={textareaRef}
-							defaultValue={data.description || undefined}
-							className="w-full mt-2"
-							id="description"
-							placeholder="Add a more detailed description"
-							errors={fieldErrors}
-						/>
+						<FormTextarea ref={textareaRef} defaultValue={data.description || undefined} className="w-full mt-2" id="description" placeholder="Details zur Karte" errors={fieldErrors} />
 						<div className="flex items-center gap-x-2">
-							<FormSubmit>Save</FormSubmit>
+							<FormSubmit>Speichern</FormSubmit>
 							<Button type="button" onClick={disableEditing} size="sm" variant="ghost">
-								Cancel
+								Abbrechen
 							</Button>
 						</div>
 					</form>
 				) : (
 					<div onClick={enableEditing} role="button" className="min-h-[78px] bg-neutral-200 text-sm font-medium py-3 px-3.5 rounded-md">
-						{data.description || "Add a more detailed description."}
+						{data.description || "Gib' weitere Details an"}
 					</div>
 				)}
 			</div>

@@ -21,7 +21,6 @@ interface CardFormProps {
 }
 
 export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(({ listId, enableEditing, disableEditing, isEditing }, ref) => {
-	
 	const params = useParams();
 	const formRef = useRef<ElementRef<"form">>(null);
 
@@ -64,7 +63,7 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(({ listId
 				<FormTextarea id="title" onKeyDown={onTextareakeyDown} ref={ref} placeholder="Enter a title for this card..." errors={fieldErrors} />
 				<input hidden id="listId" name="listId" value={listId} />
 				<div className="flex items-center gap-x-1">
-					<FormSubmit>Add a card...</FormSubmit>
+					<FormSubmit>Karte hinzufügen</FormSubmit>
 					<Button onClick={disableEditing} size="sm" variant="ghost">
 						<X className="h-5 w-5" />
 					</Button>
@@ -77,7 +76,7 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(({ listId
 		<div className="pt-2 px-2">
 			<Button onClick={enableEditing} className="h-auto px-2 py-1.5 w-full justify-start text-muted-foreground text-sm" variant="ghost" size="sm">
 				<Plus className="h-4 w-4 mr-2" />
-				Add a card...
+				Karte hinzufügen...
 			</Button>
 		</div>
 	);

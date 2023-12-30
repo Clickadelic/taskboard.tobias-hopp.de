@@ -55,14 +55,14 @@ export const Actions = ({ data }: ActionsProps) => {
 	};
 	return (
 		<div className="space-y-2 mt-2">
-			<p className="text-xs font-semibold">Actions</p>
+			<p className="text-xs font-semibold">Aktionen</p>
 			<Button onClick={onCopy} disabled={isLoadingCopy} variant="gray" size="inline" className="w-full justify-start">
 				<Copy className="h-4 w-4 mr-2" />
-				Copy
+				Kopieren
 			</Button>
-			<Button onClick={onDelete} disabled={isLoadingDelete} variant="gray" size="inline" className="w-full justify-start">
+			<Button onClick={onDelete} disabled={isLoadingDelete} variant="gray" size="inline" className="w-full justify-start text-rose-400 hover:text-rose-500">
 				<Trash className="h-4 w-4 mr-2" />
-				Delete
+				Löschen
 			</Button>
 		</div>
 	);

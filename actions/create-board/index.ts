@@ -24,7 +24,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
 	if (!imageId || !imageThumbUrl || !imageFullUrl || !imageUserName || !imageLinkHTML) {
 		return {
-			error: "Missing fields. Failed to create board."
+			error: "Fehlende Felder. Gib' einen Titel an."
 		};
 	}
 
@@ -51,7 +51,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 		});
 	} catch (error) {
 		return {
-			error: "Failed to create board"
+			error: "Fehler beim Erstellen des Boards"
 		};
 	}
 

@@ -13,7 +13,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
 	if (!userId || !orgId) {
 		return {
-			error: "Unauthorized"
+			error: "Nicht authorisiert"
 		};
 	}
 
@@ -38,7 +38,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 		});
 	} catch (error) {
 		return {
-			error: "Failed to update!"
+			error: "Fehler beim Aktualisieren des Boards"
 		};
 	}
 
