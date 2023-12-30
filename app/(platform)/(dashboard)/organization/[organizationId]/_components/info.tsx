@@ -17,10 +17,7 @@ export const Info = () => {
 			</div>
 			<div className="space-y-1">
 				<p className="font-semibold text-xl">{organization?.name}</p>
-				<div className="flex items-center text-xs text-muted-foreground">
-					<Heart className="h-3 w-3 mr-1" />
-					<span>Willkommen zurück</span>
-				</div>
+				<div className="flex items-center text-xs text-muted-foreground">Taskboards</div>
 			</div>
 		</div>
 	);
