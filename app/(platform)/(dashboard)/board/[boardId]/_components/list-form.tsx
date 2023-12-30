@@ -89,7 +89,7 @@ export const ListForm = () => {
 		<ListWrapper>
 			<button onClick={enableEditing} className="w-full rounded-md bg-white/80 hover:bg-white/50 transition p-3 flex items-center font-medium text-sm">
 				<Plus className="h-4 w-4 mr-2" />
-				Add a list
+				Liste hinzufügen
 			</button>
 		</ListWrapper>
 	);

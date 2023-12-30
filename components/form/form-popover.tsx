@@ -49,7 +49,7 @@ export const FormPopover = ({ children, side = "bottom", align, sideOffset = 0 }
 				<form action={onSubmit} className="space-y-4">
 					<div className="space-y-4">
 						<FormPicker id="image" errors={fieldErrors} />
-						<FormInput id="title" label="Board title" type="text" errors={fieldErrors} />
+						<FormInput id="title" label="Board-Titel" type="text" errors={fieldErrors} />
 					</div>
 					<FormSubmit className="w-full">Speichern</FormSubmit>
 				</form>
