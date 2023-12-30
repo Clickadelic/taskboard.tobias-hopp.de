@@ -17,7 +17,7 @@ export const Navbar = () => {
 						Neues Board
 					</Button>
 				</FormPopover>
-				<FormPopover align="start" side="bottom" sideOffset={9}>
+				<FormPopover align="start" side="bottom" sideOffset={0}>
 					<Button variant="primary" size="sm" className="rounded-sm block md:hidden">
 						<Plus className="h-4 w-4" />
 					</Button>
