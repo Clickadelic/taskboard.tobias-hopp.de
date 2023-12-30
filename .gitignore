@@ -6,7 +6,7 @@ node_modules
 .vercel
 
 next-env.d.ts
-tsconfig.tsbuildinfo
+*.tsbuildinfo
 # Logs
 logs
 *.log

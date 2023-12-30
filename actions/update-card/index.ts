@@ -42,7 +42,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 		});
 	} catch (error) {
 		return {
-			error: "Fehler beim Aktualisieren des Boards!"
+			error: "Fehler beim Aktualisieren des Boards"
 		};
 	}
 

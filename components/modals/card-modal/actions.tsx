@@ -19,7 +19,7 @@ export const Actions = ({ data }: ActionsProps) => {
 	const cardModal = useCardModal();
 	const { execute: executeCopyCard, isLoading: isLoadingCopy } = useAction(copyCard, {
 		onSuccess: data => {
-			toast.success(`${data.title} copied!`);
+			toast.success(`${data.title} kopiert`);
 			cardModal.onClose();
 		},
 		onError: error => {
@@ -28,7 +28,7 @@ export const Actions = ({ data }: ActionsProps) => {
 	});
 	const { execute: executeDeleteCard, isLoading: isLoadingDelete } = useAction(deleteCard, {
 		onSuccess: data => {
-			toast.success(`${data.title} deleted!`);
+			toast.success(`${data.title} gelöscht`);
 			cardModal.onClose();
 		},
 		onError: error => {

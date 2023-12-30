@@ -43,7 +43,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 		updatedCards = await db.$transaction(transaction);
 	} catch (error) {
 		return {
-			error: "Fehler beim Anordnen der Karte!"
+			error: "Fehler beim Anordnen der Karten"
 		};
 	}
 

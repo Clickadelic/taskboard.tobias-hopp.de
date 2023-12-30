@@ -37,7 +37,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 		lists = await db.$transaction(transaction);
 	} catch (error) {
 		return {
-			error: "Fehler beim Anordnen der Liste!"
+			error: "Fehler beim Anordnen der Liste"
 		};
 	}
 

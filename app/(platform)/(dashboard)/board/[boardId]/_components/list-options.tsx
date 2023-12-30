@@ -22,7 +22,7 @@ export const ListOptions = ({ data, onAddCard }: ListOptionProps) => {
 
 	const { execute: executeDelete } = useAction(deleteList, {
 		onSuccess: data => {
-			toast.success(`List ${data.title} deleted!`);
+			toast.success(`Liste ${data.title} gelöscht`);
 			closeRef.current?.click();
 		},
 		onError: error => {
@@ -32,7 +32,7 @@ export const ListOptions = ({ data, onAddCard }: ListOptionProps) => {
 
 	const { execute: executeCopy } = useAction(copyList, {
 		onSuccess: data => {
-			toast.success(`List ${data.title} copied!`);
+			toast.success(`Liste ${data.title} kopiert`);
 			closeRef.current?.click();
 		},
 		onError: error => {
