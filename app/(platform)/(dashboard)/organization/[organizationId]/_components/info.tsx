@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
-import { LayoutDashboard } from "lucide-react";
+import { LogIn } from "lucide-react";
 import { useOrganization } from "@clerk/nextjs";
-
+import { currentUser } from "@clerk/nextjs";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export const Info = () => {
+	const user = currentUser();
+
 	const { organization, isLoaded } = useOrganization();
 
 	if (!isLoaded) {
@@ -19,8 +21,8 @@ export const Info = () => {
 			<div className="space-y-1">
 				<p className="font-semibold text-xl">{organization?.name}</p>
 				<div className="flex items-center text-xs text-muted-foreground">
-					<LayoutDashboard className="h-3 w-3 mr-1" />
-					<span>Übersicht</span>
+					<LogIn className="h-3 w-3 mr-1" />
+					<span>{user?.lastSignInAt}</span>
 				</div>
 			</div>
 		</div>
