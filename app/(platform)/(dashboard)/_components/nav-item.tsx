@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import { Layout, Activity, Settings, CreditCard } from "lucide-react";
+import { Layout, Activity, Settings } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
@@ -32,19 +32,14 @@ export const NavItem = ({ isExpanded, isActive, organization, onExpand }: NavIte
 			href: `/organization/${organization.id}`
 		},
 		{
-			label: "Activity",
+			label: "Aktivitäten",
 			icon: <Activity className="h-4 w-4 mr-2" />,
 			href: `/organization/${organization.id}/activity`
 		},
 		{
-			label: "Settings",
+			label: "Einstellungen",
 			icon: <Settings className="h-4 w-4 mr-2" />,
 			href: `/organization/${organization.id}/settings`
-		},
-		{
-			label: "Billing",
-			icon: <CreditCard className="h-4 w-4 mr-2" />,
-			href: `/organization/${organization.id}/billing`
 		}
 	];
 
